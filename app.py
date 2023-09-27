@@ -5,7 +5,7 @@ from botocore.config import Config
 app = Flask(__name__)
 
 # S3 configuration
-s3 = boto3.client('s3', config=Config(signature_version='s3v4', ssl_verify=False))
+s3 = boto3.client('s3', config=Config(signature_version='s3v4', ssl_verify=True))
 S3_BUCKET = 'selfiecamaustinfctest123'
 S3_BASE_URL = f'https://{S3_BUCKET}.s3.amazonaws.com/'
 
