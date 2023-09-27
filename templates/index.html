@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AUSTIN FC SELFIE CAM TEST</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 20px; /* Added margin to center the text vertically */
+        }
+
+        .upload-container {
+            text-align: center;
+            margin-top: 250px;
+        }
+
+        .custom-upload-button {
+            padding: 20px 40px;
+            font-size: 20px;
+            background-color: #00B140;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .custom-upload-button input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .custom-upload-button::before {
+            content: "Upload"; /* Display this text on the button */
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 40;
+            background-color: inherit;
+            text-align: center;
+            line-height: 60px; /* Adjust to vertically center text */
+        }
+
+        .custom-upload-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style for the "View Uploaded Images" button */
+        .view-button-container {
+            margin-top: auto; /* Push the button to the bottom of the screen */
+        }
+
+        .view-button {
+            margin-top: 100px; /* Add some spacing between the buttons */
+        }
+    </style>
+</head>
+<body>
+    <h1>AUSTIN FC SELFIE CAM TEST</h1>
+    <div class="upload-container">
+        <!-- <label class="custom-upload-button">
+            <input type="file" name="image"> -->
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="image">
+                <input type="submit" value="Upload">
+        <!-- </label> -->
+    </div>
+    <!-- <div class="view-button-container">
+        <a href="{{ url_for('view') }}" class="view-button"><button>View Uploaded Images</button></a>
+
+    </div> -->
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .upload-container {
+            text-align: center;
+        }
+
+        .upload-button {
+            padding: 20px 40px;
+            font-size: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .upload-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Upload</h1>
+    <div class="upload-container">
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image">
+            <br><br>
+            <input class="upload-button" type="submit" value="Upload">
+        </form>
+    </div>
+    <a href="{{ url_for('view') }}"><button>View Uploaded Images</button></a>
+</body>
+</html> -->
